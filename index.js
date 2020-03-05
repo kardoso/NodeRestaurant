@@ -77,7 +77,12 @@ app.get("/getOrder", function (req, res) {
 });
 
 app.get("/payBill", function (req, res) {
-    htmlResponse = ""
+    bill = 0
+    order = []
+    htmlResponse = `
+		<p>The bill was paid.</p>
+		<a href="/"><button>Back to main page</button></a>
+	`
     res.send(htmlResponse)
 });
 
