@@ -6,7 +6,16 @@ let order = [];
 let bill = 0;
 
 app.get("/", function (req, res) {
-    htmlResponse = ""
+    htmlResponse = `
+		<p>Hello, may I take your order?</p>
+		<a href="/orderWater"><button>Order water</button></a>
+		<a href="/orderBurger"><button>Order burger</button></a>
+		<a href="/orderFries"><button>Order fries</button></a>
+		<br/><br/>
+		<a href="/getBill"><button>See the bill</button></a>
+		<a href="/getOrder"><button>See the orders</button></a>
+		<a href="/payBill"><button>Pay the bill</button></a>
+	`
     res.send(htmlResponse)
 });
 
