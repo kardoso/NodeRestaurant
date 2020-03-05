@@ -49,6 +49,16 @@ app.get("/orderFries", function (req, res) {
   res.send(htmlResponse)
 });
 
+app.get("/orderCake", function (req, res) {
+  order.push('cake')
+  bill += 5.99
+  htmlResponse = `
+		<p>You just ordered cake!</p>
+		<a href="/"><button>Back to main page</button></a>
+	`
+  res.send(htmlResponse)
+});
+
 app.get("/getBill", function (req, res) {
   htmlResponse = `
 		<p>Your current bill is ${bill > 0 ? "$" + bill : "empty"}</p>
