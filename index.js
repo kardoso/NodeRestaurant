@@ -11,6 +11,8 @@ app.get("/", function (req, res) {
 		<a href="/orderWater"><button>Order water</button></a>
 		<a href="/orderBurger"><button>Order burger</button></a>
 		<a href="/orderFries"><button>Order fries</button></a>
+		<a href="/orderCake"><button>Order cake</button></a>
+		<a href="/orderPie"><button>Order pie</button></a>
 		<br/><br/>
 		<a href="/getBill"><button>See the bill</button></a>
 		<a href="/getOrder"><button>See the orders</button></a>
