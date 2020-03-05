@@ -59,7 +59,20 @@ app.get("/getBill", function (req, res) {
 });
 
 app.get("/getOrder", function (req, res) {
-    htmlResponse = ""
+    htmlResponse = `
+		<p>Your actual order is
+		${order.length > 0 ?
+			"<ul>" +
+				order.map(function (value) {
+					return "<li>" + value + "</li>"
+				}).join('') +
+			"</ul>"
+			:
+			"empty"
+		}</p>
+		<a href="/getBill"><button>See the bill</button></a>
+		<a href="/"><button>Back to main page</button></a>
+	`
     res.send(htmlResponse)
 });
 
