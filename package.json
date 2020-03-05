@@ -1,0 +1,19 @@
+{
+  "name": "restaurant",
+  "version": "1.0.0",
+  "description": "A small app that simulates simple orders and bill payment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kardoso/NodeRestaurant.git"
+  },
+  "author": "Samuel Cardoso",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kardoso/NodeRestaurant/issues"
+  },
+  "homepage": "https://github.com/kardoso/NodeRestaurant#readme"
+}
