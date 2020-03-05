@@ -59,6 +59,16 @@ app.get("/orderCake", function (req, res) {
   res.send(htmlResponse)
 });
 
+app.get("/orderPie", function (req, res) {
+  order.push('pie')
+  bill += 5.99
+  htmlResponse = `
+		<p>You just ordered pie!</p>
+		<a href="/"><button>Back to main page</button></a>
+	`
+  res.send(htmlResponse)
+});
+
 app.get("/getBill", function (req, res) {
   htmlResponse = `
 		<p>Your current bill is ${bill > 0 ? "$" + bill : "empty"}</p>
