@@ -30,7 +30,12 @@ app.get("/orderWater", function (req, res) {
 });
 
 app.get("/orderBurger", function (req, res) {
-    htmlResponse = ""
+    order.push('burger')
+    bill += 6.50
+    htmlResponse = `
+		<p>You just ordered a burger!</p>
+		<a href="/"><button>Back to main page</button></a>
+	`
     res.send(htmlResponse)
 });
 
