@@ -40,7 +40,12 @@ app.get("/orderBurger", function (req, res) {
 });
 
 app.get("/orderFries", function (req, res) {
-    htmlResponse = ""
+    order.push('fries')
+    bill += 3.00
+    htmlResponse = `
+		<p>You just ordered fries!</p>
+		<a href="/"><button>Back to main page</button></a>
+	`
     res.send(htmlResponse)
 });
 
