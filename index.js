@@ -50,7 +50,11 @@ app.get("/orderFries", function (req, res) {
 });
 
 app.get("/getBill", function (req, res) {
-    htmlResponse = ""
+    htmlResponse = `
+		<p>Your current bill is ${bill > 0 ? "$" + bill : "empty"}</p>
+		${bill > 0 ? `<a href="/payBill"><button>Pay the bill</button></a>` : ""}
+		<a href="/"><button>Back to main page</button></a>
+	`
     res.send(htmlResponse);
 });
 
